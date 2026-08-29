@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VEDA Coffee & Eatery — Hisar</title>
+  <meta name="description"
+        content="VEDA Coffee & Eatery — Wood-fired pizzas, premium coffee, shakes, burgers, wraps, falafel and more in Hisar, Haryana.">
+
+  <style>
+    /* =========================================================
+       VEDA COFFEE & EATERY
+       Premium Apple-inspired Liquid Glass Café Website
+    ========================================================= */
+
+    :root {
+      --bg: #050505;
+      --bg-soft: #0b0b0b;
+      --card: rgba(255,255,255,0.07);
+      --card-hover: rgba(255,255,255,0.11);
+      --border: rgba(255,255,255,0.14);
+      --text: #f5f5f7;
+      --muted: #a1a1a6;
+      --white: #ffffff;
+      --green: #b8d8bd;
+      --gold: #d7bd82;
+      --max: 1180px;
+      --radius: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,255,255,.08), transparent 28%),
+        radial-gradient(circle at 85% 35%, rgba(180,210,185,.07), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(94%, 1080px);
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 12px 18px;
+
+      background: rgba(18,18,18,.68);
+      backdrop-filter: blur(25px) saturate(180%);
+      -webkit-backdrop-filter: blur(25px) saturate(180%);
+
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 999px;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.4),
+        inset 0 1px rgba(255,255,255,.08);
+    }
+
+    .logo {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      padding-left: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 13px;
+      color: #d2d2d7;
+    }
+
+    .nav-links a {
+      transition: .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-cta {
+      background: white;
+      color: black;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 160px 20px 90px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-content {
+      width: min(900px, 100%);
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 8px 15px;
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(20px);
+
+      color: #d1d1d6;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #79c58b;
+      box-shadow: 0 0 12px #79c58b;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 10vw, 125px);
+      line-height: .92;
+      letter-spacing: -.065em;
+      font-weight: 700;
+
+      background: linear-gradient(
+        180deg,
+        #ffffff 5%,
+        #cfcfd4 55%,
+        #77777c 100%
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .btn {
+      padding: 14px 23px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn-glass {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(20px);
+    }
+
+    /* Decorative glow */
+
+    .glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+
+      background: radial-gradient(
+        circle,
+        rgba(200,220,205,.12),
+        transparent 65%
+      );
+
+      filter: blur(30px);
+      pointer-events: none;
+    }
+
+    .glow.one {
+      top: 15%;
+      left: -170px;
+    }
+
+    .glow.two {
+      right: -180px;
+      bottom: 5%;
+    }
+
+    /* ================= GENERAL ================= */
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .container {
+      width: min(var(--max), 100%);
+      margin: auto;
+    }
+
+    .section-label {
+      color: #9b9ba1;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(38px, 6vw, 68px);
+      letter-spacing: -.055em;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 17px;
+    }
+
+    /* ================= GLASS CARD ================= */
+
+    .glass {
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.10),
+        rgba(255,255,255,.035)
+      );
+
+      border: 1px solid var(--border);
+      backdrop-filter: blur(25px) saturate(150%);
+      -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+      box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 25px 80px rgba(0,0,0,.25);
+    }
+
+    /* ================= EXPERIENCE ================= */
+
+    .experience-grid {
+      margin-top: 45px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .experience-card {
+      padding: 30px;
+      min-height: 190px;
+      border-radius: var(--radius);
+      transition: .3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-7px);
+      background: var(--card-hover);
+    }
+
+    .experience-icon {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .experience-card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .experience-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ================= FEATURED FOOD ================= */
+
+    .featured {
+      margin-top: 45px;
+
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 16px;
+    }
+
+    .featured-main {
+      min-height: 470px;
+      border-radius: var(--radius);
+      padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.95),
+          rgba(0,0,0,.1)
+        ),
+        url("menu-1.jpg") center/cover;
+      overflow: hidden;
+    }
+
+    .featured-main h3 {
+      font-size: clamp(34px, 5vw, 55px);
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+
+    .featured-main p {
+      color: #d0d0d5;
+      margin-top: 10px;
+    }
+
+    .featured-side {
+      display: grid;
+      gap: 16px;
+    }
+
+    .food-mini {
+      border-radius: var(--radius);
+      padding: 28px;
+      min-height: 145px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .food-mini h3 {
+      font-size: 22px;
+    }
+
+    .food-mini span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ================= MENU ================= */
+
+    #menu {
+      position: relative;
+    }
+
+    .menu-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: end;
+    }
+
+    .menu-highlight {
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.11),
+          rgba(255,255,255,.035)
+        );
+
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 30px 90px rgba(0,0,0,.35);
+    }
+
+    .menu-highlight-title {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .menu-highlight-sub {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .menu-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .menu-photo {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      cursor: zoom-in;
+    }
+
+    .menu-photo img {
+      height: 500px;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .menu-photo:hover img {
+      transform: scale(1.035);
+    }
+
+    /* Menu list */
+
+    .menu-category {
+      margin-top: 65px;
+    }
+
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      padding-bottom: 15px;
+      margin-bottom: 5px;
+    }
+
+    .category-header h3 {
+      font-size: 30px;
+      letter-spacing: -.03em;
+    }
+
+    .category-header span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .menu-item h4 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .menu-item p {
+      color: #8f8f96;
+      font-size: 13px;
+      margin-top: 3px;
+      max-width: 650px;
+    }
+
+    .price {
+      white-space: nowrap;
+      font-weight: 600;
+      color: #e7e7e9;
+    }
+
+    /* ================= REVIEWS ================= */
+
+    .rating-card {
+      margin-top: 45px;
+      padding: 40px;
+      border-radius: var(--radius);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .rating-number {
+      font-size: 75px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -.07em;
+    }
+
+    .stars {
+      letter-spacing: 3px;
+      margin: 8px 0;
+    }
+
+    .rating-card p {
+      color: var(--muted);
+    }
+
+    .review-note {
+      max-width: 550px;
+      color: #c9c9ce !important;
+      font-size: 16px;
+    }
+
+    /* ================= LOCATION ================= */
+
+    .location-card {
+      margin-top: 45px;
+      border-radius: 32px;
+      padding: 40px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .location-card h3 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .location-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .location-info {
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-row {
+      padding: 15px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .info-row small {
+      color: #77777d;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 70px 20px 35px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-inner {
+      width: min(var(--max), 100%);
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-end;
+    }
+
+    .footer-logo {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -.04em;
+    }
+
+    .footer-copy {
+      color: #737379;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      padding: 10px 15px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      color: #c9c9ce;
+      font-size: 13px;
+    }
+
+    /* ================= FLOATING WHATSAPP ================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+      background: white;
+      color: black;
+
+      font-size: 24px;
+      box-shadow: 0 15px 50px rgba(0,0,0,.5);
+
+      transition: .25s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* ================= ANIMATION ================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      nav {
+        padding: 11px 14px;
+      }
+
+      section {
+        padding: 75px 17px;
+      }
+
+      .experience-grid,
+      .featured,
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-main {
+        min-height: 400px;
+      }
+
+      .menu-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-photo img {
+        height: auto;
+        max-height: 650px;
+      }
+
+      .rating-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .experience-card {
+        min-height: 160px;
+      }
+
+      .menu-highlight {
+        padding: 18px;
+      }
+
+      .location-card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+    <a href="#home" class="logo">VEDA</a>
+
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#location">Visit</a>
+    </div>
+
+    <a href="#menu" class="nav-cta">View Menu</a>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero" id="home">
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        Open · Closes 10 PM
+      </div>
+
+      <h1>
+        Coffee.<br>
+        Food.<br>
+        VEDA.
+      </h1>
+
+      <p>
+        A cozy indoor & outdoor café in Hisar serving
+        wood-fired pizzas, handcrafted coffee, refreshing
+        shakes and comfort food.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#menu">
+          Explore the Menu
+        </a>
+
+        <a
+          class="btn btn-glass"
+          href="https://wa.me/917404097404"
+          target="_blank">
+          WhatsApp VEDA
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= EXPERIENCE ================= -->
+
+  <section id="experience">
+
+    <div class="container reveal">
+
+      <div class="section-label">The VEDA Experience</div>
+
+      <h2 class="section-title">
+        More than<br>just coffee.
+      </h2>
+
+      <p class="section-description">
+        Come for the coffee. Stay for the food, atmosphere
+        and conversations.
+      </p>
+
+
+      <div class="experience-grid">
+
+        <div class="experience-card glass">
+          <div class="experience-icon">🔥</div>
+          <h3>Wood-Fired</h3>
+          <p>
+            Enjoy flavorful wood-fired pizzas and
+            freshly prepared café favourites.
+          </p>
+        </div>
+
+        <div class="experience-card glass">
+          <div class="experience-icon">☕</div>
+          <h3>Fresh Coffee</h3>
+          <p>
+            Espresso-based coffee including Cappuccino,
+            Latte, Mocha, Flat White and more.
+          </p>
+        </div>
+
+        <div class="experience-card glass">
+          <div class="experience-icon">🌿</div>
+          <h3>Indoor + Outdoor</h3>
+          <p>
+            A cozy café atmosphere with outdoor seating,
+            garden vibes and a fireplace.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOD SHOWCASE ================= -->
+
+  <section>
+
+    <div class="container reveal">
+
+      <div class="section-label">Made to be Craved</div>
+
+      <h2 class="section-title">
+        Your next<br>favourite bite.
+      </h2>
+
+
+      <div class="featured">
+
+        <div class="featured-main">
+
+          <div>
+            <h3>Wood-fired<br>Pizza.</h3>
+
+            <p>
+              Crafted for that warm, satisfying café experience.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="featured-side">
+
+          <div class="food-mini glass">
+            <span>POPULAR</span>
+            <h3>Peri-Peri Fries</h3>
+            <span>₹159</span>
+          </div>
+
+          <div class="food-mini glass">
+            <span>COFFEE</span>
+            <h3>Cappuccino</h3>
+            <span>₹189</span>
+          </div>
+
+          <div class="food-mini glass">
+            <span>REFRESHING</span>
+            <h3>Berry Shake</h3>
+            <span>Ask at VEDA</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MENU ================= -->
+
+  <section id="menu">
+
+    <div class="container">
+
+      <div class="menu-heading reveal">
+
+        <div>
+          <div class="section-label">The Menu</div>
+
+          <h2 class="section-title">
+            Come hungry.<br>
+            Leave happy.
+          </h2>
+
+          <p class="section-description">
+            From crispy starters and loaded burgers to
+            handcrafted coffee, hot chocolate and matcha.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- MENU PHOTO HIGHLIGHT -->
+
+      <div class="menu-highlight reveal">
+
+        <div class="menu-highlight-title">
+          Explore the VEDA Menu
+        </div>
+
+        <div class="menu-highlight-sub">
+          Swipe through the menu photos
+        </div>
+
+        <div class="menu-gallery">
+
+          <div class="menu-photo">
+            <img
+              src="menu-1.jpg"
+              alt="VEDA Coffee & Eatery Menu Page 1"
+              loading="lazy">
+          </div>
+
+          <div class="menu-photo">
+            <img
+              src="menu-2.jpg"
+              alt="VEDA Coffee & Eatery Menu Page 2"
+              loading="lazy">
+          </div>
+
+          <div class="menu-photo">
+            <img
+              src="menu-3.jpg"
+              alt="VEDA Coffee & Eatery Menu Page 3"
+              loading="lazy">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- STARTERS -->
+
+      <div class="menu-category reveal">
+
+        <div class="category-header">
+          <h3>Starters</h3>
+          <span>CRISPY · COMFORT · SHAREABLE</span>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <h4>Classic Salted Fries</h4>
+          </div>
+          <div class="price">₹149</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <h4>Peri-Peri Fries</h4>
+          </div>
+          <div class="price">₹159</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <h4>Cheesy Fries</h4>
+          </div>
+          <div class="price">₹179</div>
+        </div>
+
+        <div class="menu-item">
+           <div>
+h4>
+
+X
+
+Code
+
+Preview
+
+<h4>Nacho Fries</h4>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Cheesy Grand Nachos</h4>
+
+</div>
+
+<div class="price">₹219</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Potato Wedges</h4>
+
+</div>
+
+<div class="price">₹149</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Cheese Onion Rings</h4>
+
+</div>
+
+<div class="price">₹179</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Chilli Cheese Popper Fries</
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Masala Poha</h4>
+
+<p>
+
+Served with onion, tomatoes, sev and jeerawan masala.
+
+</p>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+</div></div>
+
+<!-- FALAFEL -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Falafel Platter & Rolls</h3>
+
+<span>FRESH FLAVOURFUL</span>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Classic Platter</h4>
+
+<p>
+
+Falafel, hummus, toum, pickled vegetables, pita bread.
+
+</p>
+
+</div>
+
+<div class="price">₹399</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Falafel and Chips</h4>
+
+<p>
+
+Hummus, toum, falafel, French
+
+fries and salad.
+
+</p>
+
+</div>
+
+<div class="price">₹399</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Peri-Peri Falafel and Chips</
+
+h4>
+
+<p>
+
+masala,
+
+Hummus, toum, falafel, peri-peri French fries and salad.
+
+</p>
+
+</div>
+
+<div class="price">₹399</div>
+
+</div><div class="menu-item">
+
+<div>
+
+<h4>Mexican Falafel Roll</h4>
+
+<p>
+
+Toum, hummus, falafel, salsa,
+
+tomato,
+
+cheese blend, red paprika, corn
+
+and jalapeños.
+
+</p>
+
+</div>
+
+<div class="price">₹279</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Tandoori Paneer Falafel Roll</
+
+h4>
+
+<p>
+
+Toum, hummus, falafel, tandoori
+
+sauce,
+
+roasted paneer, capsicum,
+
+tomato, onions,
+
+mint mayonnaise and chaat
+
+masala.
+
+</p>
+
+</div>
+
+<div class="price">₹299</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Ratatouille Falafel Roll</h4>
+
+<p>
+
+Toum, hummus, falafel, bell
+
+peppers, tabbouleh,
+
+onions, Brazil zucchini and mozzarella cheese.
+
+</p>
+
+</div>
+
+<div class="price">₹299</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Extra Dip Hummus</h4>
+
+</div><div class="menu-item">
+
+<div>
+
+<h4>Extra Dip Salsa</h4>
+
+</div>
+
+<div class="price">₹50</div>
+
+</div>
+
+</div>
+
+<!-- SANDWICH -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Sandwich</h3>
+
+<span>TOASTED FRESH</span>
+
+</div>
+
+<div class="menu-item"
+
+<div>
+
+<h4>Mushroom & Cheese Sandwich</
+
+h4>
+
+<p>
+
+Garlic loaf, sautéed mushroom
+
+and melted cheese
+
+served in toasted bread.
+
+</p>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Mediterranean Sandwich</h4>
+
+<p>
+
+Brown bread filled with sautéed
+
+veggies,
+
+onion, tomato
+
+broccoli, mushroom, paneer, and dressed with low-fat mix
+
+sauce.
+
+</p>
+
+</div>
+
+<div class="price">₹199</div></div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Paneer Tikka Sandwich</h4>
+
+<p>
+
+Smoky paneer tikka and fresh
+
+vegetables,
+
+grilled to perfection.
+
+</p>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Avocado Toast</h4>
+
+<p>
+
+Toasted sourdough with smashed
+
+avocado,
+
+cherry tomatoes, chilli crunch and fresh lemon.
+
+</p>
+
+</div>
+
+<div class="price">₹249</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Cold Sandwich</h4>
+
+<p>
+
+Light, refreshing and packed
+
+with fresh flavours.
+
+</p>
+
+</div>
+
+<div class="price">₹149</div>
+
+</div>
+
+</div>
+
+<!-- WRAPS -->
+
+<div class="menu-category reveal">
+
+<div class="category-header"><h3>Wraps</h3>
+
+<span>QUICK FLAVOURFUL</span>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Frankie Wrap</h4>
+
+</div>
+
+<div class="price">₹159</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Paneer Tikka Wrap</h4>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+</div>
+
+<!-- BURGERS -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Burgers</h3>
+
+<span>LOADED CRISPY</span>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Cheesy Veg. Delight</h4>
+
+<p>
+
+A golden veg patty loaded with
+
+gooey cheese
+
+and fresh garden vegetables.
+
+</p>
+
+</div>
+
+<div class="price">₹149</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Royal Paneer Burger</h4>
+
+<p>Crunchy paneer patty dressed and tandoori sauce. with mayonnaise
+
+</p>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Mexican Blaze Burger</h4>
+
+<p>
+
+Spicy herb & chilli patty
+
+layered with fiery Schezwan sauce, fresh veggies and melted cheese.
+
+</p>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+</div>
+
+<!-- SUBS -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Subs</h3>
+
+<span>FRESH FILLING</span>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Veggie Delight Sub</h4>
+
+<p>
+
+Farm fresh veggies filled in whole some garlic loaf.
+
+</p>
+
+</div>
+
+<div class="price">₹169</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Aloo Tikki Sub</h4>
+
+<p>
+
+Fresh potato tikki with a crunch of healthy veggies.
+
+</p>
+
+</div>
+
+<div class="price">₹179</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Paneer Tikka Sub</h4>
+
+<p>
+
+Crunch of paneer tikki along with crunchy veggies.
+
+</p>
+
+</div>
+
+<div class="price">₹199</div>
+
+</div>
+
+</div>
+
+<!-- COFFEE -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Fresh Bean Coffee</h3>
+
+<span>WITHOUT MILK</span>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Espresso</h4>
+
+<p>60ml shot.</p>
+
+</div>
+
+<div class="price">₹139</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Americano</h4>
+
+<p>Black coffee.</p>
+
+</div>
+
+<div class="price">₹149</div></div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Signature Affogato</h4>
+
+<p>Espresso shot served with vanilla ice cream.</p>
+
+</div>
+
+<div class="price">₹179</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Pistachio Affogato</h4>
+
+</div>
+
+<div class="price">₹210</div>
+
+</div>
+
+</div>
+
+<!-- COFFEE WITH MILK -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Fresh Bean Coffee</h3>
+
+<span>WITH MILK</span>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Cappuccino</h4></div>
+
+<div class="price">₹189</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Cafe Latte</h4></div>
+
+<div class="price">₹189</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Cafe Mocha</h4></div>
+
+<div class="price">₹189</div>
+
+</div>
+
+<div class="menu-item"><div><h4>Flat White</h4></div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Macchiato</h4></div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Nutella Mocha</h4></div>
+
+<div class="price">₹199</div>
+
+</div>
+
+<div class="menu-item">
+
+<div>
+
+<h4>Flavour Add-on</h4>
+
+<p>
+
+Hazelnut, Caramel, Coconut,
+
+Vanilla,
+
+Irish and Tiramisu.
+
+</p>
+
+</div>
+
+<div class="price">+30</div>
+
+</div>
+
+</div>
+
+<!-- HOT CHOCOLATE -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Hot Chocolate</h3>
+
+<span>RICH COMFORTING</span>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Hot Chocolate</h4></div>
+
+<div class="price">₹159</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Hot Chocolate with
+
+Marshmallow</h4></div><div class="price">*179</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Hot Nutella</h4></div>
+
+<div class="price">₹169</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Hot Ferrero Rocher</h4></
+
+div>
+
+<div class="price">₹199</div>
+
+</div>
+
+</div>
+
+<!-- TEA -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Tea</h3>
+
+<span>CLASSIC REFRESHING</span> </div>
+
+<div class="menu-item">
+
+<div><h4>Black Tea</h4></div>
+
+<div class="price">29</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Masala Tea</h4></div>
+
+<div class="price">₹49</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Green Tea</h4></div>
+
+<div class="price">₹129</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Honey Lemon Ginger Tea</
+
+h4></div>
+
+<div class="price">₹129</div>
+
+</div>div>
+
+<div class="menu-item">
+
+<div><h4>Masala Tea Combo</h4></div>
+
+<div class="price">₹129</div>
+
+</div>
+
+</div>
+
+<!-- MATCHA -->
+
+<div class="menu-category reveal">
+
+<div class="category-header">
+
+<h3>Matcha Specials</h3>
+
+<span>MODERN REFRESHING</span>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Matcha Latte</h4></div>
+
+<div class="price">₹249</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Hot Matcha Tea</h4></div>
+
+<div class="price">₹249</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Matcha Frappe</h4></div>
+
+<div class="price">₹299</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Iced Matcha Latte</h4></
+
+<div class="price">₹299</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Strawberry Matcha</h4></
+
+div>
+
+<div class="price">₹299</div>
+
+</div>
+
+<div class="menu-item">
+
+<div><h4>Mango Matcha</h4></div><div class="price">₹299</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+====== <!--
+
+REVIEWS
+
+===
+
+<section id="reviews">
+
+<div class="container reveal">
+
+<div class="section-label">Loved by
+
+Hisar</div>
+
+<h2 class="section-title">
+
+888 reasons<br>to visit.
+
+</h2>
+
+<div class="rating-card glass">
+
+<div>
+
+<div class="rating-number">4.4</div>
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+888 Google reviews
+
+</p>
+
+</div>
+
+<p class="review-note">
+
+Guests frequently praise VEDA for its wood-fired
+
+pizzas, refreshing shakes, fresh ingredients, cozy atmosphere and friendly
+
+service.
+
+</p></p>
+
+</div>
+
+</div>
+
+</section>
+
+<!
+
+================= LOCATION
+
+<section id="location">
+
+<div class="container reveal">
+
+<div class="section-label">Find VEDA</
+
+div>
+
+<h2 class="section-title">
+
+Your table<br>is waiting.
+
+</h2>
+
+<div class="location-card glass">
+
+<div>
+
+<h3>VEDA Coffee & Eatery</h3>
+
+<p>
+
+A premium indoor & outdoor café
+
+experience
+
+in Hisar, Haryana.
+
+</p>
+
+<a
+
+class="btn btn-primary"
+
+href="https://www.google.com/maps/search/?api= 1&query=VEDA+Coffee+%26+Eatery+Hisar"
+
+target="_blank">
+
+Get Directions
+
+</a>
+
+</div><div class="location-info">
+
+<div class="info-row">
+
+<small>ADDRESS</small>
+
+Nagar,
+
+Type 4, Park, Besides Vidyut
+
+Hisar, Haryana 125005
+
+</div>
+
+<div class="info-row">
+
+<small>PHONE</small>
+
+<a href="tel:+917404097404">
+
+074040 97404
+
+</a>
+
+</div>
+
+<div class="info-row">
+
+<small>PRICE RANGE</small> 200-₹1,000 per person
+
+</div>
+
+<div class="info-row" >
+
+<small>OPENING</small>
+
+Open Closes 10 PM
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--
+
+================= FOOTER
+
+-->
+
+<footer>
+
+<div class="footer-inner">
+
+<div>
+
+<div class="footer-logo">
+
+VEDA.</div>
+
+<div class="footer-copy">
+
+Coffee Food Conversations
+
+Hisar
+
+</div>
+
+<div class="footer-copy">
+
+©2026 VEDA Coffee & Eatery
+
+</div>
+
+</div>
+
+<div class="footer-links">
+
+<a href="#menu">Menu</a>
+
+<a href="tel:+917404097404">
+
+Call
+
+</a>
+
+<a
+
+href="https://wa.me/917404097404"
+
+target="_blank">
+
+WhatsApp
+
+</a>
+
+<a
+
+href="https://www.google.com/maps/search/?api= 1&query=VEDA+Coffee+%26+Eatery+Hisar"
+
+target="_blank">
+
+Directions
+
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+
+<aclass="whatsapp"
+
+href="https://wa.me/917404097404"
+
+target="_blank"
+
+aria-label="WhatsApp VEDA">
+
+</a>
+
+<!-- ================= JAVASCRIPT
+
+-->
+
+<script>
+
+/* Scroll reveal animation */
+
+const observer = new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach(entry => {
+
+if (entry.isIntersecting) {
+
+entry.target.classList.add("show"
+
+}
+
+});
+
+},
+
+{
+
+threshold: 0.12
+
+}
+
+);
+
+document
+
+.querySelectorAll(".reveal")
+
+.forEach(element =>
+
+observer.observe (element));
+
+/* Menu image lightbox */
+
+document
+
+.querySelectorAll(".menu-photo img")
+
+.forEach(img => {img.addEventListener("click", () => {
+
+const overlay =
+
+document.createElement("div");
+
+overlay.style.cssText =
+
+position:fixed;
+
+inset:0;
+
+z-index:9999;
+
+background:rgba(0,0,0,.94);
+
+backdrop-filter: blur (20px);
+
+display: flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding: 20px;
+
+cursor:zoom-out;
+
+const image =
+
+document.createElement("img");
+
+image.src = img.src;
+
+image.style.cssText =
+
+max-width:95%;
+
+max-height:95%;
+
+width:auto;
+
+border-radius: 18px;
+
+object-fit:contain;
+
+overlay.appendChild(image);
+
+overlay.addEventListener("click", ()
+
+=> {
+
+overlay.remove();
+
+});
+
+document.body.appendChild(overlay);
+
+});
+
+});
+
+</script>
+</body>
+</html>
